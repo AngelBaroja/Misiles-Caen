@@ -173,10 +173,14 @@ class Escena extends Phaser.Scene {
         this.load.audio('misilDestruido', '../sonido/Chipped.mp3');
         this.load.audio('misilImpacto', '../sonido/Dark hit, echo.mp3');
         this.load.audio('ambiente', '../sonido/Lost.mp3');  
-        this.load.audio('nivel++', '../sonido/Space woosh.mp3');        
+        this.load.audio('nivel++', '../sonido/Space woosh.mp3');  
+        this.load.audio('llamas', '../sonido/Volcano Eruption.wav');          
     }
 
     create() {
+        this.sound.play("llamas",{
+            volume:0.6
+        })
         this.time.removeAllEvents(); // detiene todos los eventos programados (como el lanzamiento de misiles)
         this.add.sprite(320, 480, 'fondo2');
         this.sound.play("ambiente",{
