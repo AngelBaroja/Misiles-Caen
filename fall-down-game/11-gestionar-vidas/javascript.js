@@ -28,7 +28,7 @@ class Tutorial extends Phaser.Scene {
     }
 
     create() {
-        this.add.sprite(320, 480, 'fondo');
+        this.add.sprite(config.width / 2, config.height / 2, 'fondo');
         this.sound.play("ambiente",{
             loop:true,
             volume: 0.3
